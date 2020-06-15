@@ -8,7 +8,7 @@ Danh sách liên kết là một cấu trúc dữ liệu được sử dụng r�
 Danh sách liên kết là một tập hợp các phần tử dữ liệu, tuy nhiên các phần tử này không liền kề nhau trên địa chỉ vật lý. Thay vào đó, mỗi phần tử trỏ đến địa chỉ của phần tử kế tiếp nó.
 
 ![Ví dụ danh sách liên kết](https://res.cloudinary.com/practicaldev/image/fetch/s--y3j6aJXJ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/practicaldev/image/fetch/s--_PwtVEkJ--/c_limit%252Cf_auto%252Cfl_progressive%252Cq_auto%252Cw_880/https://www.educative.io/api/edpresso/shot/5077575695073280/image/5192456339456000)
-*<p style="text-align:right"> Minh họa danh sách liên kết </p>*
+*<p align="center"> Minh họa danh sách liên kết </p>*
 
 Ưu điểm của dánh sách liên kết so với mảng:  
 1. Kích thước danh sách liên kết là động và không cần phải khai báo trước số lượng phần tử tối đa, đồng nghĩa với việc không cần tạo ra một vùng nhớ trống để giữ chỗ cho các phần tử khác khi cần được thêm vào  giống với mảng .
@@ -22,7 +22,7 @@ Nhược điểm của danh sách liên kết so với mảng:
 Segment Tree là một cây, cụ thể hơn, nó là một cây nhị phân đầy đủ (mỗi nút là lá hoặc có đúng 2 nút con), với mỗi nút quản lý một đoạn trên dãy số. Thông tin mà một nút quản lý trên một đoạn có thể là giá trị lớn nhất của đoạn, miền giá trị của đoạn,...
 
 ![Ví dụ về cây phân đoạn quản lý miền giá trị của đoạn](https://leetcode.com/articles/Figures/segtree_example_1.png)
-*<p style="text-align:center"> Ví dụ về cây phân đoạn quản lý tổng của đoạn </p>*
+**<p align="center"> Ví dụ về cây phân đoạn quản lý tổng của đoạn </p>*
 
 Ưu điểm của cây phân đoạn là các thao tác truy cập có độ phức tạp O(log(N)), với N là số lượng các nút lá.
 
