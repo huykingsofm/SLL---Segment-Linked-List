@@ -5,14 +5,18 @@ Sự kết hợp giữa Segment Tree (cây phân đoạn) và Linked List (danh 
 
 # Danh sách liên kết
 Danh sách liên kết là một cấu trúc dữ liệu được sử dụng rất phổ biến trong lập trình.  
-Danh sách liên kết là một tập hợp các phần tử dữ liệu, tuy nhiên các phần tử này không liền kề nhau trên địa chỉ vật lý. Thay vào đó, mỗi phần tử được tạo ra trên một vùng nhớ ngẫu nhiên và địa chỉ của vùng nhớ đó được trỏ đến (hay lưu trữ) bởi phần tử ngay trước nó trong danh sách. Để lưu trữ một danh sách liên kết, ta chỉ cần biết địa chỉ của phần tử đầu tiên (head) và phần tử cuối cùng (tail) của danh sách liên kết đó.
 
-![Ví dụ danh sách liên kết](https://res.cloudinary.com/practicaldev/image/fetch/s--y3j6aJXJ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/practicaldev/image/fetch/s--_PwtVEkJ--/c_limit%252Cf_auto%252Cfl_progressive%252Cq_auto%252Cw_880/https://www.educative.io/api/edpresso/shot/5077575695073280/image/5192456339456000)
+Danh sách liên kết là một tập hợp các phần tử dữ liệu, tuy nhiên các phần tử này không liền kề nhau trên địa chỉ vật lý. 
+Thay vào đó, mỗi phần tử được tạo ra trên một vùng nhớ ngẫu nhiên và địa chỉ của vùng nhớ đó được trỏ đến (hay lưu trữ) bởi phần tử ngay trước nó trong danh sách. 
+
+Để lưu trữ một danh sách liên kết, ta chỉ cần biết địa chỉ của phần tử đầu tiên (head) và phần tử cuối cùng (tail) của danh sách liên kết đó.
+
+![LinkedList](https://res.cloudinary.com/practicaldev/image/fetch/s--y3j6aJXJ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/practicaldev/image/fetch/s--_PwtVEkJ--/c_limit%252Cf_auto%252Cfl_progressive%252Cq_auto%252Cw_880/https://www.educative.io/api/edpresso/shot/5077575695073280/image/5192456339456000)
 *<p align="center"> Minh họa danh sách liên kết </p>*
 
 Ưu điểm của dánh sách liên kết so với mảng:  
-1. Kích thước danh sách liên kết là động và không cần phải khai báo trước số lượng phần tử tối đa, đồng nghĩa với việc không cần tạo ra một vùng nhớ trống để giữ chỗ cho các phần tử khác khi cần được thêm vào  giống với mảng .
-2. Thời gian thêm, chèn, xóa một phần tử là rất nhanh nếu biết địa chỉ ô nhớ của phần tử đó.
+1. Kích thước danh sách liên kết là động và không cần phải khai báo trước số lượng phần tử tối đa, đồng nghĩa với việc không cần tạo ra một vùng nhớ trống để giữ chỗ cho các phần tử khác.
+2. Thời gian thêm, chèn, xóa một phần tử có độ phức tạp hằng số `O(1)` nếu biết địa chỉ ô nhớ của phần tử đó.
 
 Nhược điểm của danh sách liên kết so với mảng:
 1. Truy cập một phần tử tại một vị trí nhất định có độ phức tạp tuyến tính.
@@ -21,44 +25,42 @@ Nhược điểm của danh sách liên kết so với mảng:
 # Cây phân đoạn
 Segment Tree là một cây, cụ thể hơn, nó là một cây nhị phân đầy đủ (mỗi nút là lá hoặc có đúng 2 nút con), với mỗi nút quản lý một đoạn trên dãy số. Thông tin mà một nút quản lý trên một đoạn có thể là giá trị lớn nhất của đoạn, miền giá trị của đoạn,...
 
-![Ví dụ về cây phân đoạn quản lý miền giá trị của đoạn](https://leetcode.com/articles/Figures/segtree_example_1.png)
+![SegmentTree](./imgs/SegmentTree.png)
 *<p align="center"> Ví dụ về cây phân đoạn quản lý tổng của đoạn </p>*
 
+
+![buildSegmentTree](./imgs/buildSegmentTree.gif)
+*<p align="center"> Cách tạo cây phân đoạn quản lý tổng của đoạn từ một mảng cho trước </p>*
+
+
 Các thao tác trong cây phân đoạn gồm:
-1. Truy vấn thông tin trong một đoạn bất kỳ. Để truy vấn thông tin trong đoạn có vị trí từ a đến b, ký hiệu là [a,b], ta tìm kiếm các node quản lý một số đoạn mà các đoạn đó phải nằm hoàn toàn trong [a, b] và các đoạn không giao nhau. Ví dụ với hình minh họa trên, ta cần truy vấn tổng của đoạn [2, 6], ta sẽ lấy thông tin từ các node 
+1. Truy vấn thông tin trong một đoạn bất kỳ.
 2. Cập nhật lại thông tin của cây khi có bất kỳ sự thay đổi nào của các node.
-Ưu điểm của cây phân đoạn là các thao tác truy cập có độ phức tạp O(log(N)), với N là số lượng các nút lá.
+
+![querySegmentTree](./imgs/querySegmentTree.gif)
+*<p align="center"> Cách truy vấn tổng của một đoạn liên tiếp (màu xanh nước biển) </p>*
+
+![updateSegmentTree](./imgs/updateSeqmentTree.gif)
+*<p align="center"> Cách cập nhật giá trị của một node (màu xanh nước biển) </p>*
+
+Ưu điểm của cây phân đoạn là các thao tác truy cập và cập nhật có độ phức tạp O(logN), với N là số lượng các nút lá, nhanh hơn các thao tác tương ứng trên mảng với độ phức tạp tuyến tính O(N).
+
+Nhược điểm của cây phân đoạn là thường được xây dựng trên mảng, do đó khó khăn trong việc xóa hoặc chèn phần tử vì các thao tác này khi thực hiện trên mảng có độ phức tạp tuyến tính O(n), làm mất đi ưu điểm truy cập và cập nhật nhanh của cây phân đoạn.
 
 # Ý tưởng
-Với mong muốn tận dụng tối đa khả năng tốc độ các thao tác thêm, chèn, xóa các phần tử trong danh sách liên kết, cây phân đoạn được ứng dụng vào quản lý danh sách liên kết để giảm độ phức tạp các thao tác trên xuống còn O(log(N)).
+Với mong muốn tận dụng tối đa khả năng tốc độ các thao tác thêm, chèn, xóa các phần tử trong danh sách liên kết và cây phân đoạn, chúng tôi tạo ra một loại cấu trúc dữ liệu mới có tên là Danh sách liên kết phân đoạn (Segment Linked List). Cấu trúc dữ liệu này là một danh sách liên kết và được quản lý bằng cây phân đoạn. Thông tin mà cây phân đoạn quản lý là số lượng phần tử của đoạn đó.
 
-# Hướng dẫn đóng góp
-### Bước 1: Chọn issue cần hỗ trợ và chưa có người đóng góp.
-### Bước 2: Đăng ký đóng góp bằng cách tự assign issue này cho bản thân.
-### Bước 3: Tạo pull request
-*Lưu ý: Nếu đã thực hiện mục a và b thì có thể bỏ qua*  
-a. Click vào fork để kéo repository về github của bạn, sau đó clone về máy local. 
+![SegmentLinkedList](/imgs/SegmentLinkedList.png)
+*<p align="center"> Ví dụ về một Danh sách liên kết phân đoạn với các đoạn quản lý số lượng phần tử của đoạn đó</p>*
 
-b. Tạo upstream mới liên kết với repository gốc
-> `$ git remote add upstream https://github.com/huykingsofm/SLL---Segment-Linked-List`
+Với ưu điểm của cây phân đoạn, thao tác truy vấn đến một phần tử có vị trí bất kỳ trong danh sách liên kết có độ phức tạp là O(logN) thay vì O(N).
 
-c. Đồng bộ repository ở github gốc về fork repository
-> `$ git fetch upstream`  
-> `$ git checkout master`  
-> `$ git merge upstream/master`
+Các thao tác khác của danh sách liên kết phân đoạn gồm:
+* Thêm một phần tử vào cuối danh sách
+* Chèn một phần tử vào giữa danh sách
+* Xóa một phần tử
 
-d. Tạo một branch mới với tên branch là "branch_" + mã số của issue. Ví dụ issue có mã số là #123 thì tên branch là "branch_123"
-> `$ git checkout -b branch_123`
+Các thao tác trên đều có độ phức tạp O(logN).
 
-e. Chỉnh sửa các file tương ứng với issue đã nhận
-
-f.  Commit các thay đổi với comment là tiêu đề của issue.
-> `$ git add .`  
-> `$ git commit -m "issue title"`
-
-g. Push branch đã tạo lên git
-> `$ git push -u origin branch_123`
-
-h. Vào trang github của repository gốc, đăng nhập với tài khoản của bạn, sẽ xuất hiện nút bấm **Compare & pull request**. Bấm vào nó, sau khi kiểm tra lại các thay đổi của bạn, đặt comment là tiêu đề của issue và nhấn **Create pull request**.
-
-### Bước 4: Chờ phản hồi từ người bảo trì repository.
+# Sơ đồ lớp (Class Diagram)
+![Class Diagram](./imgs/ClassDiagram.png)
