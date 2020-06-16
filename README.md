@@ -5,7 +5,7 @@ Sự kết hợp giữa Segment Tree (cây phân đoạn) và Linked List (danh 
 
 # Danh sách liên kết
 Danh sách liên kết là một cấu trúc dữ liệu được sử dụng rất phổ biến trong lập trình.  
-Danh sách liên kết là một tập hợp các phần tử dữ liệu, tuy nhiên các phần tử này không liền kề nhau trên địa chỉ vật lý. Thay vào đó, mỗi phần tử trỏ đến địa chỉ của phần tử kế tiếp nó.
+Danh sách liên kết là một tập hợp các phần tử dữ liệu, tuy nhiên các phần tử này không liền kề nhau trên địa chỉ vật lý. Thay vào đó, mỗi phần tử được tạo ra trên một vùng nhớ ngẫu nhiên và địa chỉ của nó được trỏ đến (hay lưu trữ) bởi phần tử ngay trước nó trong danh sách. Để lưu trữ một danh sách liên kết, ta chỉ cần biết địa chỉ của phần tử đầu tiên (head) và phần tử cuối cùng (tail) của danh sách liên kết đó.
 
 ![Ví dụ danh sách liên kết](https://res.cloudinary.com/practicaldev/image/fetch/s--y3j6aJXJ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/practicaldev/image/fetch/s--_PwtVEkJ--/c_limit%252Cf_auto%252Cfl_progressive%252Cq_auto%252Cw_880/https://www.educative.io/api/edpresso/shot/5077575695073280/image/5192456339456000)
 *<p align="center"> Minh họa danh sách liên kết </p>*
