@@ -24,6 +24,9 @@ Segment Tree là một cây, cụ thể hơn, nó là một cây nhị phân đ�
 ![Ví dụ về cây phân đoạn quản lý miền giá trị của đoạn](https://leetcode.com/articles/Figures/segtree_example_1.png)
 *<p align="center"> Ví dụ về cây phân đoạn quản lý tổng của đoạn </p>*
 
+Các thao tác trong cây phân đoạn gồm:
+1. Truy vấn thông tin trong một đoạn bất kỳ. Để truy vấn thông tin trong đoạn có vị trí từ a đến b, ký hiệu là [a,b], ta tìm kiếm các node quản lý một số đoạn mà các đoạn đó phải nằm hoàn toàn trong [a, b] và các đoạn không giao nhau. Ví dụ với hình minh họa trên, ta cần truy vấn tổng của đoạn [2, 6], ta sẽ lấy thông tin từ các node 
+2. Cập nhật lại thông tin của cây khi có bất kỳ sự thay đổi nào của các node.
 Ưu điểm của cây phân đoạn là các thao tác truy cập có độ phức tạp O(log(N)), với N là số lượng các nút lá.
 
 # Ý tưởng
