@@ -22,7 +22,7 @@ Nhược điểm của danh sách liên kết so với mảng:
 Segment Tree là một cây, cụ thể hơn, nó là một cây nhị phân đầy đủ (mỗi nút là lá hoặc có đúng 2 nút con), với mỗi nút quản lý một đoạn trên dãy số. Thông tin mà một nút quản lý trên một đoạn có thể là giá trị lớn nhất của đoạn, miền giá trị của đoạn,...
 
 ![Ví dụ về cây phân đoạn quản lý miền giá trị của đoạn](https://leetcode.com/articles/Figures/segtree_example_1.png)
-**<p align="center"> Ví dụ về cây phân đoạn quản lý tổng của đoạn </p>*
+*<p align="center"> Ví dụ về cây phân đoạn quản lý tổng của đoạn </p>*
 
 Ưu điểm của cây phân đoạn là các thao tác truy cập có độ phức tạp O(log(N)), với N là số lượng các nút lá.
 
