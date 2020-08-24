@@ -34,7 +34,7 @@ Segment Tree là một cây, cụ thể hơn, nó là một cây nhị phân đ�
 
 
 Các thao tác trong cây phân đoạn gồm:
-1. Truy vấn thông tin trong một đoạn bất kỳ.
+1. Truy vấn thông tin trong một đoạn liên tiếp bất kỳ.
 2. Cập nhật lại thông tin của cây khi có bất kỳ sự thay đổi nào của các node.
 
 ![querySegmentTree](./imgs/querySegmentTree.gif)
@@ -43,7 +43,7 @@ Các thao tác trong cây phân đoạn gồm:
 ![updateSegmentTree](./imgs/updateSeqmentTree.gif)
 *<p align="center"> Cách cập nhật giá trị của một node (màu xanh nước biển) </p>*
 
-Ưu điểm của cây phân đoạn là các thao tác truy cập và cập nhật có độ phức tạp O(logN), với N là số lượng các nút lá, nhanh hơn các thao tác tương ứng trên mảng với độ phức tạp tuyến tính O(N).
+Ưu điểm của cây phân đoạn là các thao tác truy cập và cập nhật có độ phức tạp O(logN), với N là số lượng các nút lá, nhanh hơn các thao tác tương ứng trên danh sách liên kết với độ phức tạp tuyến tính O(N).
 
 Nhược điểm của cây phân đoạn là thường được xây dựng trên mảng, do đó khó khăn trong việc xóa hoặc chèn phần tử vì các thao tác này khi thực hiện trên mảng có độ phức tạp tuyến tính O(n), làm mất đi ưu điểm truy cập và cập nhật nhanh của cây phân đoạn.
 
