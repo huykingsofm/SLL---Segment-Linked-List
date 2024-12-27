@@ -11,7 +11,7 @@ Thay vào đó, mỗi phần tử được tạo ra trên một vùng nhớ ng�
 
 Để lưu trữ một danh sách liên kết, ta chỉ cần biết địa chỉ của phần tử đầu tiên (head) và phần tử cuối cùng (tail) của danh sách liên kết đó.
 
-![LinkedList](https://res.cloudinary.com/practicaldev/image/fetch/s--y3j6aJXJ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/practicaldev/image/fetch/s--_PwtVEkJ--/c_limit%252Cf_auto%252Cfl_progressive%252Cq_auto%252Cw_880/https://www.educative.io/api/edpresso/shot/5077575695073280/image/5192456339456000)
+![LinkedList](https://www.educative.io/api/edpresso/shot/5077575695073280/image/5192456339456000)
 *<p align="center"> Minh họa danh sách liên kết </p>*
 
 Ưu điểm của dánh sách liên kết so với mảng:  
